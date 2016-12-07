@@ -20,7 +20,7 @@ public class Salary {
     private static final Random RANDOM = ThreadLocalRandom.current();
 
     public Salary() {
-        this.name =UUID.randomUUID().toString().substring(0,5) ;
+        this.name =UUID.randomUUID().toString().substring(0,5);
         this.baseSalary = RANDOM.nextInt(100*10000)+50000;
         this.bonus = RANDOM.nextInt(100000);
     }
