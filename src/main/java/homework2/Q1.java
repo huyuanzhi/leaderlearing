@@ -13,12 +13,12 @@ import java.io.UnsupportedEncodingException;
 public class Q1 {
 
     public static void main(String[] args) throws Exception {
-        String str = "??";
+        String str = "中国";
         byte[] b1 = str.getBytes("UTF-8");
-        System.out.println("UTF-8?????:"+b1.toString()+",???"+b1.length);
+        System.out.println("UTF-8字节内容为:"+b1.toString()+",长度为"+b1.length);
         byte[] b2 = str.getBytes("GBK");
-        System.out.println("GBK?????:"+b2.toString()+",???"+b2.length);
+        System.out.println("GBK字节内容为:"+b2.toString()+",长度为"+b2.length);
         byte[] b3 = str.getBytes("ISO-8859-1");
-        System.out.println("ISO-8859-1?????:"+b3.toString()+",???"+b3.length);
+        System.out.println("ISO-8859-1字节内容为:"+b3.toString()+",长度为"+b3.length);
     }
 }
