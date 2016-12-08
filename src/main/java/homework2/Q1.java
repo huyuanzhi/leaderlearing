@@ -1,7 +1,5 @@
 package homework2;
 
-import java.io.UnsupportedEncodingException;
-
 /**
  * @author: huyuanzhi
  * @version: 1.0

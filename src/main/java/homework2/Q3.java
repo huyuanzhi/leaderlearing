@@ -1,8 +1,7 @@
 package homework2;
 
-import java.io.*;
-import java.nio.MappedByteBuffer;
-import java.nio.channels.FileChannel;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.*;
 
 /**
@@ -41,7 +40,7 @@ public class Q3 {
         while((str = reader.readLine()) != null){
             String[] values = str.split(",");
             salary = new Salary(values[0],Integer.parseInt(values[1]),Integer.parseInt(values[2]));
-            String prefix = salary.getNamePrfixTwo();
+            String prefix = salary.getNamePrefixTwo();
             if(groups.containsKey(prefix)){
                 group = groups.get(prefix);
                 group.put("salarySum",Integer.parseInt(group.get("salarySum").toString())+salary.getYearSalary());
@@ -106,7 +105,7 @@ public class Q3 {
             return this.salary*13+bounds;
         }
 
-        public String getNamePrfixTwo(){
+        public String getNamePrefixTwo(){
             return getName().substring(0,3);
         }
     }
