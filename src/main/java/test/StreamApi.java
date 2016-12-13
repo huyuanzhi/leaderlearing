@@ -16,12 +16,9 @@ import static java.util.stream.Collectors.*;
  * Created by Administrator on 2016/12/8 0008.
  */
 public class StreamApi {
-    static Function<String, String> prefix = new Function<String, String>() {
-        @Override
-        public String apply(String s) {
-            String ret = s.substring(0, 3);
-            return ret;
-        }
+    static Function<String, String> prefix = s -> {
+        String ret = s.substring(0, 3);
+        return ret;
     };
 
 
@@ -33,22 +30,14 @@ public class StreamApi {
         return ret;
     };
 
-    static BinaryOperator<Long[]> toSat = new BinaryOperator<Long[]>() {
-        @Override
-        public Long[] apply(Long[] longs, Long[] longs2) {
-            Long[] ret = new Long[]{0L, 0L};
-            ret[0] = longs[0] + 13 * longs2[0] + longs2[1];
-            ret[1] = longs[1] + 1;
-            return ret;
-        }
+    static BinaryOperator<Long[]> toSat = (longs, longs2) -> {
+        Long[] ret = new Long[]{0L, 0L};
+        ret[0] = longs[0] + 13 * longs2[0] + longs2[1];
+        ret[1] = longs[1] + 1;
+        return ret;
     };
 
-    static Comparator<Map.Entry<String, Long[]>> cmp = new Comparator<Map.Entry<String, Long[]>>(){
-        @Override
-        public int compare(Map.Entry<String, Long[]> o1, Map.Entry<String, Long[]> o2) {
-            return Long.compare(o2.getValue()[0], o1.getValue()[0]);
-        }
-    };
+    static Comparator<Map.Entry<String, Long[]>> cmp = (o1, o2) -> Long.compare(o2.getValue()[0], o1.getValue()[0]);
 
     static Long[] init = new Long[]{0L, 0L};
     public static void main(String[] args) {
