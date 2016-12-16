@@ -8,9 +8,9 @@ package test.packageMode;
  * @packageName: test.packageMode
  * @description: XXXXXX
  */
-public class WallAlbum implements Album {
+public class Son implements Work {
     @Override
-    public String memory() {
-        return "挂在墙上,更好的留住记忆";
+    public void paint() {
+        System.out.println("儿子已经画好了一幅画");
     }
 }

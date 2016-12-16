@@ -21,7 +21,7 @@ import static java.util.stream.Collectors.reducing;
  * @packageName: homework2
  * @description: XXXXXX
  */
-public class Q3 {
+public class Q4 {
 
     public static void main(String[] args) throws Exception {
 

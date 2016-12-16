@@ -5,11 +5,10 @@ package test.packageMode;
  * @version: 1.0
  * @date: 2016/12/13
  * @project: leaderlearing
- * @packageName: test
+ * @packageName: test.packageMode
  * @description: XXXXXX
  */
-public interface Album {
+public interface Work {
 
-    public String memory();
-
+    void paint();
 }
